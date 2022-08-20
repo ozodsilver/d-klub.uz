@@ -12,20 +12,20 @@ vid.value = !vid.value
 console.log('nexty')
 }
 
+// dark mode
 
-return {vid, addVideo,docState}
+let darkMode = () => {
+document.body.classList.toggle('dark')
+}
+
+
+return {vid, addVideo,docState,darkMode}
 
   }
 }
 
 
-
-
-
-
 </script>
-
-
 
 <template>
   <div class="w-100">
@@ -98,6 +98,11 @@ return {vid, addVideo,docState}
               >
                 <i class="fab fa-instagram text-light"></i>
               </a>
+
+              <div class="form-check form-switch" @change="darkMode">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+  <label class="form-check-label text-white" for="flexSwitchCheckDefault">Qora rejim</label>
+</div>
             </div>
             <!-- Right elements -->
           </div>
@@ -337,7 +342,7 @@ return {vid, addVideo,docState}
 /* we will explain what these classes do next! */
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 3s ease;
+  transition: opacity 1s ease;
 }
 
 .v-enter-from,
@@ -360,6 +365,10 @@ return {vid, addVideo,docState}
 .slide-up-leave-to {
   opacity: 0;
   transform: translateY(-30px);
+}
+
+.dark{
+  background: rgb(16, 25, 43) !important;
 }
 
 

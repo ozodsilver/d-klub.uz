@@ -24,9 +24,7 @@ import Footer from './components/Footer.vue'
  
   }
 
-body{
-      background: rgb(248,249,255) !important ; 
-}
+
 
 ::-webkit-scrollbar {
   width: 15px   ;
