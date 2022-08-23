@@ -1,30 +1,30 @@
 
 
 <script>
-import {ref} from 'vue'
+import { ref } from "vue";
+import { useStore } from "vuex";
 export default {
-  setup(){
-    const docState = ref('saved')
-let vid = ref(true)
+  setup() {
+    const docState = ref("saved");
+    let vid = ref(true);
+    const store = useStore();
 
-const addVideo = () => {
-vid.value = !vid.value
-console.log('nexty')
-}
+    const addVideo = () => {
+      vid.value = !vid.value;
+      console.log("nexty");
+    };
 
-// dark mode
+    // dark mode
 
-let darkMode = () => {
-document.body.classList.toggle('dark')
-}
+    let darkMode = () => {
+      document.body.classList.toggle("dark");
 
+      store.state.show = !store.state.show;
+    };
 
-return {vid, addVideo,docState,darkMode}
-
-  }
-}
-
-
+    return { vid, addVideo, docState, darkMode };
+  },
+};
 </script>
 
 <template>
@@ -100,39 +100,65 @@ return {vid, addVideo,docState,darkMode}
               </a>
 
               <div class="form-check form-switch" @change="darkMode">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-  <label class="form-check-label text-white" for="flexSwitchCheckDefault">Qora rejim</label>
-</div>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  class="form-check-label text-white"
+                  for="flexSwitchCheckDefault"
+                  >Tungi rejim</label
+                >
+              </div>
             </div>
             <!-- Right elements -->
           </div>
           <!-- Container wrapper -->
         </nav>
-<Transition name="bounce">
-        <div class="row py-5 vidText" style="position: relative; z-index: 55" v-if="vid">
-          <div class="col-md-6 col-sm-12 text-white mt-5 py-5">
-            <h1 class="homeText">
-              Monitor your business on real-time Dashboard
-            </h1>
-            <p class="opacity-75">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-              pariatur nesciunt molestiae enim sunt recusandae ad vel est!
-              Commodi pariatur mollitia obcaecati omnis quas perspiciatis
-              voluptas asperiores fuga repellat accusantium!
-            </p>
-            <button class="btn btn-danger rounded-9 px-5">try for free</button>
+        <Transition name="bounce">
+          <div
+            class="row py-5 vidText"
+            style="position: relative; z-index: 55"
+            v-if="vid"
+          >
+            <div class="col-md-6 col-sm-12 text-white mt-5 py-5">
+              <h1 class="homeText">
+                Monitor your business on real-time Dashboard
+              </h1>
+              <p class="opacity-75">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore pariatur nesciunt molestiae enim sunt recusandae ad
+                vel est! Commodi pariatur mollitia obcaecati omnis quas
+                perspiciatis voluptas asperiores fuga repellat accusantium!
+              </p>
+              <button class="btn btn-danger rounded-9 px-5">
+                try for free
+              </button>
+            </div>
           </div>
-        </div>
+        </Transition>
 
-
-</Transition>
-
-<Transition>
-<div class="w-50 position-absolute " style="z-index:444; top:25%"  v-if="!vid" >
-<iframe width="600" height="350" src="https://www.youtube.com/embed/TcMBFSGVi1c?enablejsapi=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-4 shadow-lg" autoplay></iframe>
-</div>
-</Transition>
-
+        <Transition>
+          <div
+            class="w-50 position-absolute"
+            style="z-index: 444; top: 25%"
+            v-if="!vid"
+          >
+            <iframe
+              width="600"
+              height="350"
+              src="https://www.youtube.com/embed/TcMBFSGVi1c?enablejsapi=1&autoplay=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="rounded-4 shadow-lg"
+              autoplay
+            ></iframe>
+          </div>
+        </Transition>
       </div>
     </div>
 
@@ -151,7 +177,6 @@ return {vid, addVideo,docState,darkMode}
       <div
         class="
           video
-         
           w-50
           rounded-9
           position-absolute
@@ -160,38 +185,36 @@ return {vid, addVideo,docState,darkMode}
           justify-content-center
           align-items-center
         "
-        style="height: 200px; top: 25%; left: -25%; background:rgb(255,0,0)"
-         @click="addVideo"
+        style="height: 200px; top: 25%; left: -25%; background: rgb(255, 0, 0)"
+        @click="addVideo"
       >
-      <Transition name="slide-up">
-        <i
-          class="fas fa-play"
-          style="
-            font-size: 5em;
-            cursor: pointer;
-            position: absolute;
-            z-index: 667;
-            color: #fff;
-          "
-          v-if="docState === 'saved'"
-           @click="docState = 'edited'"
-       ></i>
+        <Transition name="slide-up">
+          <i
+            class="fas fa-play"
+            style="
+              font-size: 5em;
+              cursor: pointer;
+              position: absolute;
+              z-index: 667;
+              color: #fff;
+            "
+            v-if="docState === 'saved'"
+            @click="docState = 'edited'"
+          ></i>
 
-         <i
-          class="fas fa-pause"
-          style="
-            font-size: 5em;
-            cursor: pointer;
-            position: absolute;
-            z-index: 667;
-            color: #fff;
-          "
-          v-else-if="docState === 'edited'"
-             @click="docState = 'saved'"
-       ></i>
-
-</Transition>
-
+          <i
+            class="fas fa-pause"
+            style="
+              font-size: 5em;
+              cursor: pointer;
+              position: absolute;
+              z-index: 667;
+              color: #fff;
+            "
+            v-else-if="docState === 'edited'"
+            @click="docState = 'saved'"
+          ></i>
+        </Transition>
       </div>
     </div>
   </div>
@@ -282,7 +305,7 @@ return {vid, addVideo,docState,darkMode}
     rgba(233, 52, 122, 0.24063392446822474) 0%,
     rgba(23, 39, 85, 0.8736871457567402) 63%
   );
-  box-shadow: 30px 30px 50px rgb(255, 255, 255);
+  box-shadow: 10px 10px 20px rgb(154, 154, 154);
   border-top-left-radius: 20px !important;
   border-bottom-left-radius: 20px !important;
   transition: 0.2s linear;
@@ -316,8 +339,6 @@ return {vid, addVideo,docState,darkMode}
   }
 }
 
-
-
 .bounce-enter-active {
   animation: bounce-in 0.5s;
 }
@@ -336,9 +357,6 @@ return {vid, addVideo,docState,darkMode}
   }
 }
 
-
-
-
 /* we will explain what these classes do next! */
 .v-enter-active,
 .v-leave-active {
@@ -349,8 +367,6 @@ return {vid, addVideo,docState,darkMode}
 .v-leave-to {
   opacity: 0;
 }
-
-
 
 .slide-up-enter-active,
 .slide-up-leave-active {
@@ -366,11 +382,6 @@ return {vid, addVideo,docState,darkMode}
   opacity: 0;
   transform: translateY(-30px);
 }
-
-.dark{
-  background: rgb(16, 25, 43) !important;
-}
-
 
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 </style>

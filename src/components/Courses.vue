@@ -1,15 +1,36 @@
 <template>
   <div id="courses">
     <div class="container">
+      <h1 class="mt-5 opacity-75">'Dasturchilar klubi' da mavjud kurslar</h1>
       <section class="pb-4 mt-5">
-        <div class="bg-white border rounded-5">
+        <div class="border rounded-5">
           <section class="w-100 p-4">
             <div class="datatable">
               <div
                 class="datatable-inner table-responsive ps"
                 style="overflow: auto; position: relative"
               >
-                <table class="table table-striped datatable-table table-hover">
+           
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+       
+      
+      </div>
+    </div>
+  </div>
+</div>
+                <table
+                  class="table table-striped datatable-table table-hover mt-4"
+                  :class="{ 'table-dark': $store.state.show }"
+                >
                   <thead class="datatable-header">
                     <tr>
                       <th style="cursor: pointer" scope="col">
@@ -36,15 +57,7 @@
                         ></i>
                         Gender
                       </th>
-                      <th style="cursor: pointer" scope="col">
-                        <i
-                          data-mdb-sort="field_3"
-                          class="datatable-sort-icon fas fa-arrow-up"
-                          style="transform: rotate(0deg)"
-                        ></i>
-                        Age
-                      </th>
-                   
+                  
                     </tr>
                   </thead>
                   <tbody class="datatable-body">
@@ -62,15 +75,19 @@
                       </td>
 
                       <td>
-
-{{student.Gender}}
+                        {{ student.Gender }}
                       </td>
-                      <td>
-                        {{student.Age}}
+                      <td class="d-block text-center">
+                        <button
+                          class="btn btn-primary mod"
+                          @click="batafsil(student.ID)"
+                          href="#exampleModalToggle1"
+                          role="button"
+                           data-mdb-toggle="modal" data-mdb-target="#exampleModal"
+                        >
+                          batafsil ...
+                        </button>
                       </td>
-
-
-
                     </tr>
                   </tbody>
                 </table>
@@ -81,47 +98,68 @@
       </section>
     </div>
   </div>
+
 </template>
 
 <script setup>
-const studentData = [
+import { ref } from "vue";
+
+const studentData = ref([
   {
-    ID: "01",
+    ID: 1,
     Name: "Abiola Esther",
     Course: "Computer Science",
     Gender: "Female",
     Age: "17",
   },
   {
-    ID: "02",
+    ID: 2,
     Name: "Robert V. Kratz",
     Course: "Philosophy",
     Gender: "Male",
     Age: "19",
   },
   {
-    ID: "03",
+    ID: 3,
     Name: "Kristen Anderson",
     Course: "Economics",
     Gender: "Female",
     Age: "20",
   },
   {
-    ID: "04",
+    ID: 4,
     Name: "Adam Simon",
     Course: "Food science",
     Gender: "Male",
     Age: "21",
   },
   {
-    ID: "05",
+    ID: 5,
     Name: "Daisy Katherine",
     Course: "Business studies",
     Gender: "Female",
     Age: "22",
   },
-];
+]);
+
+
+let batafsil = (id) => {
+  let modalTitle = document.querySelector('.modal-title')
+  let mal2 = document.getElementById("mal2");
+  studentData.value.forEach((el) => {
+    if (el.ID == id) {
+      modalTitle.innerHTML = el.Name;
+      mal2.innerHTML = el.Course;
+   
+    }
+  });
+};
 </script>
 
 <style lang="scss" scoped>
+#courses{
+  .modal{
+    color:rgb(21, 14, 14) !important; 
+  }
+}
 </style>

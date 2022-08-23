@@ -115,7 +115,7 @@
 <style lang="scss" scoped>
 #footer{
     width: 100%;
-  
+  color: black !important;
     background: rgb(205, 13, 86);
 clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 16%);
 position: relative;

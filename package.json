@@ -11,7 +11,8 @@
   "dependencies": {
     "mdb-ui-kit": "^4.4.0",
     "sass": "^1.54.4",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",

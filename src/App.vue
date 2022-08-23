@@ -18,6 +18,9 @@ import Footer from './components/Footer.vue'
 
 <style lang="scss" >
 
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -40,6 +43,12 @@ import Footer from './components/Footer.vue'
   border: 5px solid transparent  ;
   background-clip: content-box ;
   background-color: #210a92;
+}
+
+
+.dark{
+  background: rgb(44, 43, 43) !important;
+  color: white !important;
 }
 
 </style>
