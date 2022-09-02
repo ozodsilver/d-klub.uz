@@ -13,7 +13,7 @@
            
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
@@ -27,35 +27,41 @@
     </div>
   </div>
 </div>
+              <div class="table-responsive table-responsive-sm">
                 <table
-                  class="table table-striped datatable-table table-hover mt-4"
+                  class="table  table-striped datatable-table table-hover mt-4"
                   :class="{ 'table-dark': $store.state.show }"
                 >
                   <thead class="datatable-header">
-                    <tr>
+                    <tr class="fw-bold">
+
+
+                      
                       <th style="cursor: pointer" scope="col">
                         <i
                           data-mdb-sort="field_0"
                           class="datatable-sort-icon fas fa-arrow-up active"
                           style="transform: rotate(0deg)"
                         ></i>
-                        Name
+                        Kurs nomi
                       </th>
-                      <th style="cursor: pointer" scope="col">
-                        <i
-                          data-mdb-sort="field_1"
-                          class="datatable-sort-icon fas fa-arrow-up"
-                          style="transform: rotate(0deg)"
-                        ></i>
-                        Course
-                      </th>
+                    
                       <th style="cursor: pointer" scope="col">
                         <i
                           data-mdb-sort="field_2"
                           class="datatable-sort-icon fas fa-arrow-up"
                           style="transform: rotate(0deg)"
                         ></i>
-                        Gender
+                        Muddati
+                      </th>
+
+                      <th style="cursor: pointer" scope="col">
+                        <i
+                          data-mdb-sort="field_1"
+                          class="datatable-sort-icon fas fa-arrow-up"
+                          style="transform: rotate(0deg)"
+                        ></i>
+                        Texnologiya
                       </th>
                   
                     </tr>
@@ -92,6 +98,7 @@
                   </tbody>
                 </table>
               </div>
+              </div>
             </div>
           </section>
         </div>
@@ -107,9 +114,9 @@ import { ref } from "vue";
 const studentData = ref([
   {
     ID: 1,
-    Name: "Abiola Esther",
-    Course: "Computer Science",
-    Gender: "Female",
+    Name: "Mobile dasturlash",
+    Course: "7 oy",
+    Gender: "java, kotlin",
     Age: "17",
   },
   {

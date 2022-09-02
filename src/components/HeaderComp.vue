@@ -22,14 +22,33 @@ export default {
       store.state.show = !store.state.show;
     };
 
-    return { vid, addVideo, docState, darkMode };
+    let cursor = (event)=>{
+let cursorr = document.querySelector('#cursor');
+let x = event.screenX + 'px';
+let y = event.screenY -80 + 'px'
+console.log(x,y)
+
+cursorr.style.cssText = `transform:translate(${x}, ${y} )`
+
+    }
+
+    return { vid, addVideo, docState, darkMode, cursor };
   },
+
+
+
+  
 };
 </script>
 
 <template>
   <div class="w-100">
-    <div id="home">
+    <div id="home" @mousemove="cursor">
+
+<div id="cursor">
+
+</div>
+
       <div class="container">
         <nav class="navbar navbar-expand-lg shadow-0 py-4">
           <!-- Container wrapper -->
@@ -52,10 +71,10 @@ export default {
               <!-- Left links -->
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Dashboard</a>
+                  <a class="nav-link text-white" href="#">DK home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Team</a>
+                  <a class="nav-link text-light" href="#">Kurslar</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-light" href="#">Projects</a>
@@ -263,7 +282,7 @@ export default {
   }
   nav {
     position: relative;
-    z-index: 1111;
+    z-index: 15554545454545454545454111;
   }
 
   .homeText {
@@ -381,6 +400,24 @@ export default {
 .slide-up-leave-to {
   opacity: 0;
   transform: translateY(-30px);
+}
+
+
+
+#cursor{
+  width: 10px;
+  height: 10px;
+  box-shadow:  0 0 10px white,
+  0 0 100px white,
+  0 0 150px white,0 0 10px white,
+  0 0 200px white,
+  0 0 300px white;
+  background: white;
+  position: relative;
+  z-index: 99993333339999;
+  border-radius: 50%;
+  transition: 0.1s;
+  transition-timing-function: comparable(300, 300)
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");

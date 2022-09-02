@@ -8,13 +8,13 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  
-  <HeaderComp/>
+  <HeaderComp  v-on:mousemove = 'hoverCursor ' />
 <MainComp></MainComp>
 <LayerComp/>
 <Courses></Courses>
 <Footer></Footer>
 </template>
+
 
 <style lang="scss" >
 
