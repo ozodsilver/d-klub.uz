@@ -1,18 +1,27 @@
 <script setup>
+  import { onMounted, onUnmounted } from 'vue';
 import HeaderComp from './components/HeaderComp.vue';
 import MainComp from './components/MainComp.vue';
 import LayerComp from './components/LayerComp.vue';
 import Courses from './components/Courses.vue'
 import Footer from './components/Footer.vue'
 
+
+
+
+
 </script>
 
-<template>
-  <HeaderComp  v-on:mousemove = 'hoverCursor ' />
+<template >
+
+
+    <HeaderComp  />
 <MainComp></MainComp>
 <LayerComp/>
 <Courses></Courses>
 <Footer></Footer>
+
+
 </template>
 
 

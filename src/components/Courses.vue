@@ -1,8 +1,8 @@
-<template>
-  <div id="courses">
+<template >
+  <div id="courses" >
     <div class="container">
       <h1 class="mt-5 opacity-75">'Dasturchilar klubi' da mavjud kurslar</h1>
-      <section class="pb-4 mt-5">
+      <section class="pb-4 mt-5 ">
         <div class="border rounded-5">
           <section class="w-100 p-4">
             <div class="datatable">
@@ -27,7 +27,11 @@
     </div>
   </div>
 </div>
-              <div class="table-responsive table-responsive-sm">
+
+
+
+  <div class="table-responsive table-responsive-sm position-relative">
+
                 <table
                   class="table  table-striped datatable-table table-hover mt-4"
                   :class="{ 'table-dark': $store.state.show }"
@@ -98,18 +102,72 @@
                   </tbody>
                 </table>
               </div>
-              </div>
+
+             
+      
+            </div>
             </div>
           </section>
         </div>
       </section>
     </div>
+
+
+
+
+    <div class="w-100 bg-danger" style="position: relative; z-index:66656666; " id="quti">
+<video src="../assets/vid.mp4" autoplay muted id="vid" style="height:100%; width:100%; top:0"></video>
+    </div>
+
+
+
   </div>
 
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
+
+let handleScroll = ()=>{
+
+let vid = document.querySelector('#vid')
+
+let quti = document.querySelector('#quti')
+
+
+console.log(window.scrollY)
+
+
+if( window.scrollY < 5200){
+  vid.style.cssText = 'position:relative; z-index:55555555556565656555; top:0; height:0%'
+  quti.style.cssText = `display:none`
+}
+
+
+if(window.scrollY > 2400  ){
+  quti.style.cssText = `height:3000px`
+  vid.style.cssText = 'position:fixed; z-index:55555555556565656555; top:0; height:100%'
+  vid.play()
+vid.pause()
+
+}
+
+ 
+
+
+}
+onMounted(()=>{
+  window.addEventListener('scroll', handleScroll);
+})
+
+onUnmounted(()=>{
+  window.removeEventListener('scroll', handleScroll);
+})
+
+
+
+
+
 
 const studentData = ref([
   {
@@ -161,6 +219,9 @@ let batafsil = (id) => {
     }
   });
 };
+
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -168,5 +229,18 @@ let batafsil = (id) => {
   .modal{
     color:rgb(21, 14, 14) !important; 
   }
+
+
+ .wall{
+  height: 600px;
+
+  img{
+    transform: scale(0);
+  }
+ }
+
+
+
+
 }
 </style>

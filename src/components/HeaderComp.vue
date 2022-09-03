@@ -144,13 +144,10 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
           >
             <div class="col-md-6 col-sm-12 text-white mt-5 py-5">
               <h1 class="homeText">
-                Monitor your business on real-time Dashboard
+              Dasturchilar klubi, Dasturlashni o'rgan, IT olamida  dunyoni egalla!
               </h1>
               <p class="opacity-75">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Inventore pariatur nesciunt molestiae enim sunt recusandae ad
-                vel est! Commodi pariatur mollitia obcaecati omnis quas
-                perspiciatis voluptas asperiores fuga repellat accusantium!
+               Dasturchilar  klubi, IT ga ixtisoslashgan o'quv markazi, va IT firmasi bo'lib, hozirgi kunda zamonaviy va yoqimli kasblardan biri bo'lgan dasturlashni o'zbek yoshlariga o'rgatib kelmoqda.Siz o'z kelajagingizni IT sohasida ko'rayotgan bo'lsangiz "Dasturchilar klubi aynan siz uchun!
               </p>
               <button class="btn btn-danger rounded-9 px-5">
                 try for free
@@ -242,6 +239,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 
 <style lang="scss" scoped>
 #home {
+
   width: 100%;
   height: 82vh;
   background: rgb(23, 39, 85);
