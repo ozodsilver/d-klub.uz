@@ -142,11 +142,11 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
             style="position: relative; z-index: 55"
             v-if="vid"
           >
-            <div class="col-md-6 col-sm-12 text-white mt-5 py-5">
+            <div class="col-md-6 col-sm-12 text-white mt-4 py-5 ">
               <h1 class="homeText">
               Dasturchilar klubi, Dasturlashni o'rgan, IT olamida  dunyoni egalla!
               </h1>
-              <p class="opacity-75">
+              <p class="opacity-75  ">
                Dasturchilar  klubi, IT ga ixtisoslashgan o'quv markazi, va IT firmasi bo'lib, hozirgi kunda zamonaviy va yoqimli kasblardan biri bo'lgan dasturlashni o'zbek yoshlariga o'rgatib kelmoqda.Siz o'z kelajagingizni IT sohasida ko'rayotgan bo'lsangiz "Dasturchilar klubi aynan siz uchun!
               </p>
               <button class="btn btn-danger rounded-9 px-5">
@@ -186,8 +186,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
         data-v-6530002c=""
         class="d-block m-auto"
         src="https://app.svgator.com/assets/svgator.webapp/log-in-girl.svg"
-        width="530"
-        height="420.6666666666667"
+       id="svgator"
       />
 
       <div
@@ -201,7 +200,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
           justify-content-center
           align-items-center
         "
-        style="height: 200px; top: 25%; left: -25%; background: rgb(255, 0, 0)"
+        style="height: 170px; top: 25%; left: -25%; background: rgb(255, 0, 0)"
         @click="addVideo"
       >
         <Transition name="slide-up">
@@ -241,7 +240,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 #home {
 
   width: 100%;
-  height: 82vh;
+  height: 100vh;
   background: rgb(23, 39, 85);
   background: linear-gradient(
     0deg,
@@ -312,6 +311,9 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
       }
     }
   }
+
+
+ 
 }
 
 .homeRek {
@@ -322,7 +324,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
     rgba(233, 52, 122, 0.24063392446822474) 0%,
     rgba(23, 39, 85, 0.8736871457567402) 63%
   );
-  box-shadow: 10px 10px 20px rgb(154, 154, 154);
+  box-shadow: 10px 10px 20px rgb(126, 121, 121);
   border-top-left-radius: 20px !important;
   border-bottom-left-radius: 20px !important;
   transition: 0.2s linear;
@@ -353,6 +355,12 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
     &:hover {
       transform: translateY(-10px);
     }
+  }
+
+
+  #svgator{
+    width: 430px !important;
+    height: 300px;
   }
 }
 

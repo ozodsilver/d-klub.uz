@@ -5,7 +5,7 @@ import MainComp from './components/MainComp.vue';
 import LayerComp from './components/LayerComp.vue';
 import Courses from './components/Courses.vue'
 import Footer from './components/Footer.vue'
-
+import Xodimlar from './components/Xodimlar.vue';
 
 
 
@@ -19,6 +19,7 @@ import Footer from './components/Footer.vue'
 <MainComp></MainComp>
 <LayerComp/>
 <Courses></Courses>
+<Xodimlar></Xodimlar>
 <Footer></Footer>
 
 

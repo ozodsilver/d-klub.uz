@@ -115,9 +115,9 @@
 
 
 
-    <div class="w-100 bg-danger" style="position: relative; z-index:66656666; " id="quti">
+    <!-- <div class="w-100 bg-danger" style="position: relative; z-index:66656666; " id="quti">
 <video src="../assets/vid.mp4" autoplay muted id="vid" style="height:100%; width:100%; top:0"></video>
-    </div>
+    </div> -->
 
 
 
@@ -138,19 +138,19 @@ let quti = document.querySelector('#quti')
 console.log(window.scrollY)
 
 
-if( window.scrollY < 5200){
-  vid.style.cssText = 'position:relative; z-index:55555555556565656555; top:0; height:0%'
-  quti.style.cssText = `display:none`
-}
+// if( window.scrollY < 5200){
+//   vid.style.cssText = 'position:relative; z-index:55555555556565656555; top:0; height:0%'
+//   quti.style.cssText = `display:none`
+// }
 
 
-if(window.scrollY > 2400  ){
-  quti.style.cssText = `height:3000px`
-  vid.style.cssText = 'position:fixed; z-index:55555555556565656555; top:0; height:100%'
-  vid.play()
-vid.pause()
+// if(window.scrollY > 2400  ){
+//   quti.style.cssText = `height:3000px`
+//   vid.style.cssText = 'position:fixed; z-index:55555555556565656555; top:0; height:100%'
+//   vid.play()
+// vid.pause()
 
-}
+// }
 
  
 
