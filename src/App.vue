@@ -13,14 +13,19 @@ import Xodimlar from './components/Xodimlar.vue';
 </script>
 
 <template >
-
-
-    <HeaderComp  />
+<div style="height: 100vh;" class="bg-grayish">
+<h2 class="pt-3 p-5 text-light">The site will be launched soon...</h2>
+<img src="./assets/dk1.png" alt="" class="w-50 float-end">
+</div>
+<div id="vremenna">
+  <HeaderComp  />
 <MainComp></MainComp>
 <LayerComp/>
 <Courses></Courses>
 <Xodimlar></Xodimlar>
 <Footer></Footer>
+</div>
+  
 
 
 </template>
@@ -59,6 +64,12 @@ import Xodimlar from './components/Xodimlar.vue';
 .dark{
   background: rgb(44, 43, 43) !important;
   color: white !important;
+}
+
+
+
+#vremenna{
+display: none;
 }
 
 </style>

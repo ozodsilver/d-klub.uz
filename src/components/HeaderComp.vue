@@ -184,7 +184,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
     >
       <img
         data-v-6530002c=""
-        class="d-block m-auto"
+        class="d-block m-auto h-75"
         src="https://app.svgator.com/assets/svgator.webapp/log-in-girl.svg"
        id="svgator"
       />
@@ -424,6 +424,16 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
   border-radius: 50%;
   transition: 0.1s;
   transition-timing-function: comparable(300, 300)
+}
+
+
+@media (max-width:1380px){
+  #home{
+    #svgator{
+    width: 430px !important;
+    height: 300px !important   ;
+  }
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
