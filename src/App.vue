@@ -35,7 +35,7 @@ import Vacansy from './components/vacansy.vue'
 					<h1>Tez kunda</h1>
 					<p>Dasturchilar klubidan "Mega yangilik"<br>Bizga qo'shiling, kelajagingizni IT bilan quring</p>
 					<!-- <a href="#" class="btn1">Subscribe</a> -->
-					<a href="tg://resolve?domain=<dasturchilarklubi_HR>" class="btn2">Telegram</a>
+					<a  href="https://t.me/dasturchilarklubi" class="btn2">Telegram</a>
 				</div> <!-- content ends -->
 			</div> <!-- wrapper ends -->
 		</div> <!-- container ends -->
@@ -142,16 +142,7 @@ img{
 	align-items:center;
 	text-align: center;
 
-  &:before{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: url('./assets/dk1.png') !important;
-    background-size:  50%;
-    background-position: 130% 0%;
-    background-repeat: no-repeat;
-  }
+
 
   &:after{
     content: '';
