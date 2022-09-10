@@ -35,7 +35,7 @@
         </div>
 
          <div class="col-3 offset-1">
-            <div class="card text-center shadow-lg">
+            <div class="card text-center shadow-lg mt-5">
   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
     <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
     <a href="#!">
@@ -58,7 +58,7 @@
 
 
          <div class="col-3 offset-1">
-            <div class="card text-center  shadow-lg ">
+            <div class="card text-center   shadow-lg ">
   <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
     <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
     <a href="#!">
@@ -84,22 +84,20 @@
 <div class="row py-5">
     <div class="col-4 d-flex justify-content-around  align-items-center">
 <img src="../assets/dk1.png" alt=""  class="img w-25">
-<h5 class="text-white">Dasturchilar Klubi</h5>
+<h5 class="text-white" style="font-family: 'Bungee Inline', cursive;">Dasturchilar Klubi</h5>
     </div>
 
-     <div class="col-4 d-flex justify-content-sm-evenly align-items-center ">
-        <a href="" class="nav-link text-white">product</a>
-         <a href="" class="nav-link text-white">pricing Plans</a>
-          <a href="" class="nav-link text-white">Faq</a>
-           <a href="" class="nav-link text-white">blog</a>
+     <div class="col-4 d-flex  justify-content-sm-evenly align-items-center ">
+      <span class="text-light">©«Dasturchilar klubi  MChJ, 2018–2022</span>
     </div>
 
 
      <div class="col-4 d-flex justify-content-evenly align-items-center">
-       <a href="" class="fab fa-facebook text-white"></a>
-        <a href="" class="fab fa-twitter text-white"></a>
-         <a href="" class="fab fa-youtube text-white"></a>
-          <a href="" class="fab fa-instagram text-white"></a>
+       <a href="" class="fab fa-facebook text-light  rounded-9 fs-5  btn btn-outline-light"></a>
+        <a href="" class="fab fa-twitter text-light rounded-9 fs-5  btn btn-outline-light  "></a>
+         <a href="" class="fab fa-youtube text-light rounded-9 fs-5  btn btn-outline-light   "></a>
+         <a href="" class="fab fa-instagram text-light rounded-9 btn rounded-9 btn-outline-light fs-5">
+            </a>
     </div>
 
 </div>
@@ -153,9 +151,12 @@ position: relative;
    transition: 0.2s;
    &:hover{
      transform: translate(-20px, -20px);
-     box-shadow: 15px 15px 1px rgb(227, 227, 230) !important;
+     box-shadow: 15px 15px 100px rgb(227, 227, 230) !important;
    }
    }
 }
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 </style>

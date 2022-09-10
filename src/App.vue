@@ -6,6 +6,7 @@ import LayerComp from './components/LayerComp.vue';
 import Courses from './components/Courses.vue'
 import Footer from './components/Footer.vue'
 import Xodimlar from './components/Xodimlar.vue';
+import Vacansy from './components/vacansy.vue'
 
 
 
@@ -13,18 +14,17 @@ import Xodimlar from './components/Xodimlar.vue';
 </script>
 
 <template >
-<div style="height: 100vh;" class="bg-grayish">
-<h2 class="pt-3 p-5 text-light">The site will be launched soon...</h2>
-<img src="./assets/dk1.png" alt="" class="w-50 float-end">
-</div>
-<div id="vremenna">
+
+
   <HeaderComp  />
 <MainComp></MainComp>
 <LayerComp/>
 <Courses></Courses>
 <Xodimlar></Xodimlar>
+<Vacansy></Vacansy>
 <Footer></Footer>
-</div>
+
+
   
 
 
@@ -71,5 +71,7 @@ import Xodimlar from './components/Xodimlar.vue';
 #vremenna{
 display: none;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 
 </style>

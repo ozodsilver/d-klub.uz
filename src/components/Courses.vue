@@ -19,7 +19,9 @@
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">...</div>
+      <div class="modal-body">
+       dds
+      </div>
       <div class="modal-footer">
        
       
@@ -138,22 +140,6 @@ let quti = document.querySelector('#quti')
 console.log(window.scrollY)
 
 
-// if( window.scrollY < 5200){
-//   vid.style.cssText = 'position:relative; z-index:55555555556565656555; top:0; height:0%'
-//   quti.style.cssText = `display:none`
-// }
-
-
-// if(window.scrollY > 2400  ){
-//   quti.style.cssText = `height:3000px`
-//   vid.style.cssText = 'position:fixed; z-index:55555555556565656555; top:0; height:100%'
-//   vid.play()
-// vid.pause()
-
-// }
-
- 
-
 
 }
 onMounted(()=>{
@@ -190,7 +176,7 @@ const studentData = ref([
     Course: "Economics",
     Gender: "Female",
     Age: "20",
-  },
+  },  
   {
     ID: 4,
     Name: "Adam Simon",
@@ -210,12 +196,11 @@ const studentData = ref([
 
 let batafsil = (id) => {
   let modalTitle = document.querySelector('.modal-title')
-  let mal2 = document.getElementById("mal2");
+  let mBody = document.querySelector('.modal-body')
   studentData.value.forEach((el) => {
     if (el.ID == id) {
       modalTitle.innerHTML = el.Name;
-      mal2.innerHTML = el.Course;
-   
+      mBody.innerHTML = el.Course
     }
   });
 };

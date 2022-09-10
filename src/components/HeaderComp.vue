@@ -77,16 +77,22 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
                   <a class="nav-link text-light" href="#">Kurslar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Projects</a>
+                  <a class="nav-link text-light" href="#">Yangiliklar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">Biz haqimizda</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Projects</a>
+                  <a class="nav-link text-light" href="#">Tafsiyalar</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Projects</a>
+                  <a class="nav-link text-light" href="#">Vakansiya</a>
                 </li>
+
+
+              
               </ul>
               <!-- Left links -->
             </div>
@@ -144,7 +150,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
           >
             <div class="col-md-6 col-sm-12 text-white mt-4 py-5 ">
               <h1 class="homeText">
-              Dasturchilar klubi, Dasturlashni o'rgan, IT olamida  dunyoni egalla!
+              Dasturchilar klubi, IT olamini biz bilan zabt et!
               </h1>
               <p class="opacity-75  ">
                Dasturchilar  klubi, IT ga ixtisoslashgan o'quv markazi, va IT firmasi bo'lib, hozirgi kunda zamonaviy va yoqimli kasblardan biri bo'lgan dasturlashni o'zbek yoshlariga o'rgatib kelmoqda.Siz o'z kelajagingizni IT sohasida ko'rayotgan bo'lsangiz "Dasturchilar klubi aynan siz uchun!
@@ -240,7 +246,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 #home {
 
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background: rgb(23, 39, 85);
   background: linear-gradient(
     0deg,
@@ -255,7 +261,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
     width: 100%;
     height: 6%;
     position: absolute;
-    background: rgb(239, 42, 130);
+    background: rgb(242, 23, 93);
     bottom: 40px;
     left: 0;
     transform: rotate(-4deg);
@@ -324,7 +330,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
     rgba(233, 52, 122, 0.24063392446822474) 0%,
     rgba(23, 39, 85, 0.8736871457567402) 63%
   );
-  box-shadow: 10px 10px 20px rgb(126, 121, 121);
+  box-shadow: 10px 10px 20px rgb(20, 62, 117);
   border-top-left-radius: 20px !important;
   border-bottom-left-radius: 20px !important;
   transition: 0.2s linear;
