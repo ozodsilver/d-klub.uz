@@ -142,7 +142,7 @@ img{
 	align-items:center;
 	text-align: center;
 
-
+   
 
   &:after{
     content: '';
