@@ -1,36 +1,18 @@
 <script setup>
-  import { onMounted, onUnmounted } from 'vue';
-import HeaderComp from './components/HeaderComp.vue';
-import MainComp from './components/MainComp.vue';
-import LayerComp from './components/LayerComp.vue';
-import Courses from './components/Courses.vue'
-import Footer from './components/Footer.vue'
-import Xodimlar from './components/Xodimlar.vue';
-import Vacansy from './components/vacansy.vue'
+	import { onMounted } from 'vue';
+import Hammasi from './hammasi.vue'
+
 
 
 
 
 </script>
 
-<template >
+<template id = 'app' >
 
+<Router-view>
 
-
-
-  <HeaderComp  />
-<MainComp></MainComp>
-<LayerComp/>
-<Courses></Courses>
-<Xodimlar></Xodimlar>
-<Vacansy></Vacansy>
-<Footer></Footer>
-
-
-  
-
-
-
+</Router-view>
 
 </template>
 

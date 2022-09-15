@@ -26,7 +26,7 @@ export default {
 let cursorr = document.querySelector('#cursor');
 let x = event.screenX + 'px';
 let y = event.screenY -80 + 'px'
-console.log(x,y)
+
 
 cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 
@@ -218,7 +218,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
     content: "";
     width: 100%;
     height: 100%;
-    background: url("../assets/dk2.png");
+    background: url("../assets/dk1.png");
     position: absolute;
     border: solid;
     top: 0;

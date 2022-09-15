@@ -42,8 +42,7 @@
         let xodim1 = document.querySelector('#xodim1')
         let xodim2 =  document.querySelector('#xodim2')
         let scrollY = window.scrollY/300 - 9
-        console.log(scrollY)
-        console.log(window.scrollY)
+      
 if(window.scrollY > 2900 && window.scrollY < 3300){
     xodim1.style.cssText = `transform:scale(${scrollY-0.9})`
 
@@ -53,9 +52,6 @@ else if(window.scrollY > 3301 && window.scrollY < 3800){
     xodim2.style.cssText = `opacity:${scrollY-1.7}`
 }
 
-// if(window.scrollY < 2770){
-// xodim1.style.cssText = `transform:scale(1)`
-// }
 
     }
 

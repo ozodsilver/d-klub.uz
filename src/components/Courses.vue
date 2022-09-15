@@ -117,10 +117,6 @@
 
 
 
-    <!-- <div class="w-100 bg-danger" style="position: relative; z-index:66656666; " id="quti">
-<video src="../assets/vid.mp4" autoplay muted id="vid" style="height:100%; width:100%; top:0"></video>
-    </div> -->
-
 
 
   </div>
