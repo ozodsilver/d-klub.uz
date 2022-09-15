@@ -5,6 +5,7 @@ import { ref } from "vue";
 import { useStore } from "vuex";
 export default {
   setup() {
+    let toggle = ref(true)
     const docState = ref("saved");
     let vid = ref(true);
     const store = useStore();
@@ -22,6 +23,24 @@ export default {
       store.state.show = !store.state.show;
     };
 
+    let  playSound =  (sound)=> {
+  
+      var audio = new Audio(sound);
+
+      if(toggle.value){
+        audio.pause()
+      
+      }
+
+      if(toggle.value) {
+      
+        audio.play();
+   
+      }
+     
+     
+    }
+
     let cursor = (event)=>{
 let cursorr = document.querySelector('#cursor');
 let x = event.screenX + 'px';
@@ -32,7 +51,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 
     }
 
-    return { vid, addVideo, docState, darkMode, cursor };
+    return { vid, addVideo, docState, darkMode, cursor,playSound };
   },
 
 
@@ -137,6 +156,14 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
                   >Tungi rejim</label
                 >
               </div>
+
+              <lord-icon
+    src="https://cdn.lordicon.com/psseymno.json"
+    trigger="loop"
+    colors="primary:#4be1ec,secondary:#cb5eee"
+    style="width:50px;height:50px"
+    @click.once = "playSound('https://new.muzikavsem.org/dl/993730849/Michael_Vignola_-_Knowing_(new.muzikavsem.org).mp3')">
+</lord-icon>
             </div>
             <!-- Right elements -->
           </div>

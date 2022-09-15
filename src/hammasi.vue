@@ -1,5 +1,5 @@
 <template>
-    	<HeaderComp  @click.once = "playSound('https://new.muzikavsem.org/dl/993730849/Michael_Vignola_-_Knowing_(new.muzikavsem.org).mp3')"> </HeaderComp>
+    	<HeaderComp > </HeaderComp>
 <MainComp></MainComp>
 <LayerComp/>
 <Courses></Courses>
@@ -30,12 +30,7 @@ export default {
     },
 
     methods:{
-      playSound (sound) {
-      if(sound) {
-        var audio = new Audio(sound);
-        audio.play();
-      }
-    }
+     
     }
 }
 
