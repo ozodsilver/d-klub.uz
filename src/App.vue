@@ -15,7 +15,7 @@ import Vacansy from './components/vacansy.vue'
 
 <template >
 
-<div class="dd" style="display: none !important;">
+
 
 
   <HeaderComp  />
@@ -26,19 +26,10 @@ import Vacansy from './components/vacansy.vue'
 <Vacansy></Vacansy>
 <Footer></Footer>
 
-</div>
+
   
 
-<div class="containerr">
-			<div class="wrapper">
-				<div class="content">
-					<h1>Tez kunda</h1>
-					<p>Dasturchilar klubidan "Mega yangilik"<br>Bizga qo'shiling, kelajagingizni IT bilan quring</p>
-					<!-- <a href="#" class="btn1">Subscribe</a> -->
-					<a  href="https://t.me/dasturchilarklubi" class="btn2">Telegram</a>
-				</div> <!-- content ends -->
-			</div> <!-- wrapper ends -->
-		</div> <!-- container ends -->
+
 
 
 </template>

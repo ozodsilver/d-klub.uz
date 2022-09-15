@@ -79,18 +79,20 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
                 <li class="nav-item">
                   <a class="nav-link text-light" href="#">Yangiliklar</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Biz haqimizda</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Tafsiyalar</a>
-                </li>
 
                 <li class="nav-item">
                   <a class="nav-link text-light" href="#">Vakansiya</a>
                 </li>
 
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">Biz haqimizda</a>
+                </li>
+
+                <!-- <li class="nav-item">
+                  <a class="nav-link text-light" href="#">Tafsiyalar</a>
+                </li> -->
+
+             
 
               
               </ul>
@@ -98,9 +100,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
             </div>
 
             <div class="d-flex align-items-center gap-3">
-              <button class="btn btn-outline-danger rounded-9 px-5">
-                sign up
-              </button>
+             
               <a
                 class="btn btn-primary"
                 style="background-color: #3b5998"
@@ -156,7 +156,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
                Dasturchilar  klubi, IT ga ixtisoslashgan o'quv markazi, va IT firmasi bo'lib, hozirgi kunda zamonaviy va yoqimli kasblardan biri bo'lgan dasturlashni o'zbek yoshlariga o'rgatib kelmoqda.Siz o'z kelajagingizni IT sohasida ko'rayotgan bo'lsangiz "Dasturchilar klubi aynan siz uchun!
               </p>
               <button class="btn btn-danger rounded-9 px-5">
-                try for free
+               Ro'yxatdan o'tish
               </button>
             </div>
           </div>
@@ -184,60 +184,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
       </div>
     </div>
 
-    <div
-      class="homeRek hover-shadow position-absolute rounded-top rounded-bottom"
-      style="right: 0; top: 25%; width: 35%"
-    >
-      <img
-        data-v-6530002c=""
-        class="d-block m-auto h-75"
-        src="https://app.svgator.com/assets/svgator.webapp/log-in-girl.svg"
-       id="svgator"
-      />
-
-      <div
-        class="
-          video
-          w-50
-          rounded-9
-          position-absolute
-          shadow-lg
-          d-flex
-          justify-content-center
-          align-items-center
-        "
-        style="height: 170px; top: 25%; left: -25%; background: rgb(255, 0, 0)"
-        @click="addVideo"
-      >
-        <Transition name="slide-up">
-          <i
-            class="fas fa-play"
-            style="
-              font-size: 5em;
-              cursor: pointer;
-              position: absolute;
-              z-index: 667;
-              color: #fff;
-            "
-            v-if="docState === 'saved'"
-            @click="docState = 'edited'"
-          ></i>
-
-          <i
-            class="fas fa-pause"
-            style="
-              font-size: 5em;
-              cursor: pointer;
-              position: absolute;
-              z-index: 667;
-              color: #fff;
-            "
-            v-else-if="docState === 'edited'"
-            @click="docState = 'saved'"
-          ></i>
-        </Transition>
-      </div>
-    </div>
+   
   </div>
 </template>
 

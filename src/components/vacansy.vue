@@ -3,9 +3,10 @@
       <div class="container">
         <h1 class="mt-5">Vakansiya</h1>
       </div>
-<div class="container mt-5 position-relative" style="height:70vh">
+<div class="container mt-5 position-relative" style="height:75vh">
 
-    <div class="card mb-3" style="max-width: 540px;" >
+   <div class="d-flex"> 
+    <div class="card  mb-3 shadow-lg" style="width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img
@@ -28,109 +29,9 @@
     </div>
   </div>
 </div>
+   </div>
 
 
-<div class="card mb-3" style="max-width: 540px; position: absolute; left:30%; top:30%" ref="card1"  @click="clickHover" title="cardni oldinga chiqarish uchun bosing">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-        src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-        alt="Trendy Pants and Shoes"
-        class="img-fluid rounded-start"
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-
-      
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="card mb-3" style="max-width: 540px; position: absolute; left:55%; top:0%" >
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-        src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-        alt="Trendy Pants and Shoes"
-        class="img-fluid rounded-start"
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="card mb-3" style="max-width: 540px; position: absolute; left:0%; top:60%">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-        src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-        alt="Trendy Pants and Shoes"
-        class="img-fluid rounded-start"
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="card mb-3" style="max-width: 540px; position: absolute; left:60%; top:60%">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-        src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-        alt="Trendy Pants and Shoes"
-        class="img-fluid rounded-start"
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -147,7 +48,11 @@ export default {
     setup () {
         
         let card1 = ref(null)
-      
+      let cards = [
+        {
+name:'ss',
+age:44
+      }]
 
 
      let clickHover = ()=>{
@@ -198,7 +103,16 @@ onMounted(()=>{
   transition:all 1s;
   z-index: 33333;
 }
-   
+   .card:nth-child(1){
+position: absolute !important;
+left:-20px !important;
+   }
+
+   .card:nth-child(2n){
+position: absolute !important;
+left:200px !important;
+   }
+
     }
 
 </style>
