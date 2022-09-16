@@ -5,7 +5,7 @@ import { ref } from "vue";
 import { useStore } from "vuex";
 export default {
   setup() {
-    let toggle = ref(true)
+    let lord = ref(null)
     const docState = ref("saved");
     let vid = ref(true);
     const store = useStore();
@@ -23,23 +23,25 @@ export default {
       store.state.show = !store.state.show;
     };
 
+
+
+
+
+
     let  playSound =  (sound)=> {
-  
+
       var audio = new Audio(sound);
 
-      if(toggle.value){
-        audio.pause()
-      
-      }
-
-      if(toggle.value) {
+      if(sound) {
       
         audio.play();
-   
+        lord.value.trigger = 'loop'
+        
       }
-     
-     
+
     }
+
+
 
     let cursor = (event)=>{
 let cursorr = document.querySelector('#cursor');
@@ -51,7 +53,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 
     }
 
-    return { vid, addVideo, docState, darkMode, cursor,playSound };
+    return { vid, addVideo, docState, darkMode, cursor,playSound,lord };
   },
 
 
@@ -159,11 +161,14 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 
               <lord-icon
     src="https://cdn.lordicon.com/psseymno.json"
-    trigger="loop"
+    trigger="morph"
     colors="primary:#4be1ec,secondary:#cb5eee"
-    style="width:50px;height:50px"
-    @click.once = "playSound('https://new.muzikavsem.org/dl/993730849/Michael_Vignola_-_Knowing_(new.muzikavsem.org).mp3')">
+    style="width:40px;height:40px"
+    @click.once = "playSound('https://new.muzikavsem.org/dl/993730849/Michael_Vignola_-_Knowing_(new.muzikavsem.org).mp3')"
+ ref = 'lord'>
 </lord-icon>
+
+
             </div>
             <!-- Right elements -->
           </div>
@@ -221,12 +226,13 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 
   width: 100%;
   height: 90vh;
-  background: rgb(23, 39, 85);
-  background: linear-gradient(
-    0deg,
-    rgba(23, 39, 85, 1) 35%,
-    rgba(23, 39, 85, 1) 35%
-  );
+  background-color: rgba(0,0,0,0.8);
+  background-blend-mode: color-burn;
+  background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-03/1614855749_23-p-foni-uzori-24.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  
+ 
   clip-path: polygon(0 0, 100% 0%, 100% 84%, 0 100%);
 
   position: relative;
@@ -274,20 +280,25 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 
       &:before {
         content: "";
-        transition: all 0.3s linear;
+        transition: all 0.2s ease-in;
         width: 0;
       }
 
       &:hover:before {
         content: "";
         width: 100%;
-        height: 2px;
+        height: 1px;
         border-right: 2px solid white;
         border-radius: 20px;
         position: absolute;
         bottom: 0;
         background: white;
-        box-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white;
+        box-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;
+      }
+
+      a{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.3em;
       }
     }
   }
@@ -394,10 +405,14 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
   width: 10px;
   height: 10px;
   box-shadow:  0 0 10px white,
+  0 0 10px white,
+
   0 0 100px white,
   0 0 150px white,0 0 10px white,
   0 0 200px white,
-  0 0 300px white;
+  0 0 300px white,
+  0 0 100px white,
+  0 0 100px white;
   background: white;
   position: relative;
   z-index: 99993333339999;
@@ -417,4 +432,5 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
 </style>
