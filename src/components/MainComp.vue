@@ -8,9 +8,9 @@
 
 
   <router-link :to="{name:'courses'}"   @click.prevent = "playSound('https://www.soundjay.com/buttons/button-30.wav')"   class="btn btn-primary bg-gradient w-75 m-auto rounded-9 ">Kurs yangiliklari</router-link >
-  <router-link :to="{name:'dkNews'}" class="btn btn-primary bg-gradient w-75 m-auto rounded-9 mt-4 ">DK yangiliklari</router-link >
-  <router-link :to="{name:'ITnews'}" class="btn btn-primary bg-gradient w-75 m-auto rounded-9 mt-4 ">Vakansiya  </router-link >
-  <router-link :to="{name:'vakansynews'}" class="btn btn-primary bg-gradient w-75 m-auto rounded-9 mt-4 ">IT yangiliklari</router-link >
+  <router-link :to="{name:'dkNews'}" class="btn btn-primary bg-gradient w-75 m-auto rounded-9 mt-4 "  @click.prevent = "playSound('https://www.soundjay.com/buttons/button-30.wav')">DK yangiliklari</router-link >
+  <router-link :to="{name:'ITnews'}" class="btn btn-primary bg-gradient w-75 m-auto rounded-9 mt-4 "  @click.prevent = "playSound('https://www.soundjay.com/buttons/button-30.wav')">Vakansiya  </router-link >
+  <router-link :to="{name:'vakansynews'}" class="btn btn-primary bg-gradient w-75 m-auto rounded-9 mt-4 "  @click.prevent = "playSound('https://www.soundjay.com/buttons/button-30.wav')">IT yangiliklari</router-link >
 </div>
 
 </div>
