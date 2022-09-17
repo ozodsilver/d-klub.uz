@@ -9,17 +9,26 @@ import Hammasi from './hammasi.vue'
 </script>
 
 <template id = 'app' >
-
-<Router-view>
+<div id="pp">
+	<Router-view>
 
 </Router-view>
+
+
+</div>
+<h1 class="text-center ">Tez kunda!</h1>
 
 </template>
 
 
+
+
 <style lang="scss" >
-
-
+@media (max-width:2000px){
+	#pp{
+		display: none;
+	}
+}
 
 
 *{
@@ -48,7 +57,7 @@ import Hammasi from './hammasi.vue'
 
 
 .dark{
-  background: rgb(44, 43, 43) !important;
+  background: rgb(22, 22, 22) !important;
 
   color: white !important;
 

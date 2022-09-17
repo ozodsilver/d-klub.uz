@@ -1,162 +1,215 @@
 
-
 <script setup>
 
 </script>
 
 <template>
 
-    <div id="footer" class="pt-4">
-<h1 class="text-white text-center fw-bold pt-5 mt-2 w-50 m-auto" style="position: relative; z-index: 515; transform:rotate(-4.5deg)">Pricing Plans</h1>
-<p class="opacity-65 w-50 text-center m-auto text-white mt-5 pt-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum architecto veniam totam error minima doloribus nulla ipsum? Sit unde esse tempora dolorem illo cum similique officiis! Sunt labore veritatis repellendus.</p>
-
-<div class="container position-relative mt-5 footerCards" style="z-index:88">
-    <div class="row pt-5 pb-5 justify-content-sm-around" style="border-bottom:1px solid gray">
-        <div class="col-3 offset-0 ">
-<div class="card text-center  shadow-lg shadow-6-strong ">
-  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-    <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
-    <a href="#!">
-      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-    </a>
-  </div>
-
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
-    </p>
-
-    <button type="button" class="btn btn-primary d-block w-100">Button</button>
-  </div>
-  
-</div>
-        </div>
-
-         <div class="col-3 offset-1">
-            <div class="card text-center shadow-lg mt-5">
-  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-    <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
-    <a href="#!">
-      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-    </a>
-  </div>
- 
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
-    </p>
-
-    <button type="button" class="btn btn-primary d-block w-100">Button</button>
-  </div>
-
-</div>
-        </div>
-
-
-         <div class="col-3 offset-1">
-            <div class="card text-center   shadow-lg ">
-  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-    <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
-    <a href="#!">
-      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-    </a>
-  </div>
-
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
-    </p>
-
-    <button type="button" class="btn btn-primary d-block w-100">Button</button>
-  </div>
-
-</div>
-        </div>  
+<footer class="section bg-footer">
+  <div class="container">
+    <div>
+      <h6 class="footer-heading text-uppercase text-white">Informations</h6>
+      <ul class="footer-link mt-4">
+        <li><a href="#!">Sitemap</a></li>
+        <li><a href="#!">Our team</a></li>
+        <li><a href="#!">Terms of Services</a></li>
+      </ul>
     </div>
-
-
-<div class="row py-5">
-    <div class="col-4 d-flex justify-content-around  align-items-center">
-<img src="../assets/dk1.png" alt=""  class="img w-25">
-<h5 class="text-white" style="font-family: 'Bungee Inline', cursive;">Dasturchilar Klubi</h5>
+    <div>
+      <h6 class="footer-heading text-uppercase text-white">Help</h6>
+      <ul class="footer-link mt-4">
+        <li><a href="#!">Register</a></li>
+        <li><a href="#!">Sign in</a></li>
+        <li><a href="#!">Privacy Policy</a></li>
+      </ul>
     </div>
-
-     <div class="col-4 d-flex  justify-content-sm-evenly align-items-center ">
-      <span class="text-light">©«Dasturchilar klubi  MChJ, 2018–2022</span>
+    <div class="footer-link">
+      <h6 class="footer-heading text-uppercase text-white">Contact us</h6>
+      <p class="contact-info mt-4">Need help ?</p>
+      <p class="contact-info">+XX XX-XX-XX-XX-XX</p>
+      <div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#!"><i class="fab facebook footer-social-icon fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a href="#!"><i class="fab twitter footer-social-icon fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#!"><i class="fab instagram footer-social-icon fa-instagram"></i></a></li>
+        </ul>
+      </div>
     </div>
-
-
-     <div class="col-4 d-flex justify-content-evenly align-items-center">
-       <a href="" class="fab fa-facebook text-light  rounded-9 fs-5  btn btn-outline-light"></a>
-        <a href="" class="fab fa-twitter text-light rounded-9 fs-5  btn btn-outline-light  "></a>
-         <a href="" class="fab fa-youtube text-light rounded-9 fs-5  btn btn-outline-light   "></a>
-         <a href="" class="fab fa-instagram text-light rounded-9 btn rounded-9 btn-outline-light fs-5">
-            </a>
-    </div>
-
-</div>
-
-
-
-
-</div>
-    </div>
+  </div>
+  <div class="text-center mt-5">
+    <p class="footer-alt">2022 © Society, All Rights Reserved</p>
+  </div>
+</footer>
 </template>
 
 
 <style lang="scss" scoped>
-#footer{
-    width: 100%;
-  color: black !important;
-    background: rgb(205, 13, 86);
-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 16%);
-position: relative;
-&:before{
+
+.container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+      margin: 0;
+  margin-top: 1.5rem;
+}
+
+.bg-footer {
+  background-color: #33383c;
+  font-family: 'Raleway', sans-serif;
+height:50vh;
+padding: 20px;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-heading {
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+
+  a {
+    color: #acacac;
+    line-height: 40px;
+    font-size: 16px;
+    transition: all 0.2s;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+
+    &:hover {
+      color: #E0952E;
+    }
+  }
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.list-inline-item {
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  display: inline-block;
+}
+
+.contact-info {
+  color: #acacac;
+  font-size: 16px;
+}
+
+.footer-social-icon {
+  font-size: 15px;
+  height: 34px;
+  width: 34px;
+  line-height: 34px;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+}
+
+.facebook {
+  transition: transform 1s ease 0s;
+  background-color: #4e71a8;
+  color: #ffffff;
+}
+
+.twitter {
+  transition: transform 1s ease 0s;
+  background-color: #55acee;
+  color: #ffffff;
+}
+
+.instagram {
+  transition: transform 1s ease 0s;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color: #ffffff;
+}
+
+/* HOVER */
+
+.facebook:hover, .twitter:hover, .instagram:hover {
+  transform: rotate(360deg);
+}
+
+.footer-alt {
+  color: #acacac;
+}
+
+.footer-heading {
+  position: relative;
+  padding-bottom: 12px;
+
+  &:after {
     content: '';
-    width: 100%;
-    height: 100%;
-   background: rgb(23, 39, 85);
+    width: 25px;
+    border-bottom: 1px solid #FFF;
     position: absolute;
-    top:3%;
     left: 0;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 16%);
-
-}
-
-&:after{
-    content: '';
-    width: 90%;
-    height: 90%;
-   background: url('../assets/dk1.png');
-   background-size: 40%;
-   background-position: right 50px;
-   background-repeat: no-repeat;
-    position: absolute;
-    top:3%;
+    bottom: 0;
     right: 0;
-    opacity: 0.1;
-   
-
+    margin: auto;
+    display: block;
+    border-bottom: 3px solid #E0952E;
+  }
 }
 
-.footerCards{
-    transition: 0.5s;
-   .card{
-   transition: 0.2s;
-   &:hover{
-     transform: translate(-20px, -20px);
-     box-shadow: 15px 15px 100px rgb(227, 227, 230) !important;
-   }
-   }
-}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
 </style>
