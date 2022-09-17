@@ -3,7 +3,7 @@
 <div class="container">
 
 <h1 class="text-center fw-bold" id="feature">Yangiliklar</h1>
-<p class="text-center opacity-70">Dasturchilar Klubida, kurs yangiliklari, Firmada ishga qabul, va IT olamidagi yangiliklarini o'qishingiz mumkin</p>
+<p class="text-center opacity-70"><kbd class="text-white">"Dasturchilar Klubi"</kbd> da kurs yangiliklari, Firmadagi ish o'rinlari, va IT olamidagi yangiliklarini o'qishingiz mumkin</p>
 <div class="row  mt-5">
 
 

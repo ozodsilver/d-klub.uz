@@ -191,6 +191,10 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
                Ro'yxatdan o'tish
               </button>
             </div>
+
+            <div class="col-md-6 ">
+              <img src="../assets/dkk.png" alt="" class="w-75 d-block m-auto">
+            </div>
           </div>
         </Transition>
 
@@ -225,7 +229,7 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
 #home {
 
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-color: rgba(0,0,0,0.8);
   background-blend-mode: color-burn;
   background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-03/1614855749_23-p-foni-uzori-24.jpg');
