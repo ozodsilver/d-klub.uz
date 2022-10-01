@@ -21,18 +21,33 @@
         </div>
       </div>
 
-      <Transition name="bounce">
-      <div class="w-75 bg-light p-3 shadow mod rounded-7" style="height: 300px" v-show="show">
+  <div class="black" v-show="modals">
+    <Transition name="bounce">
+    <div class="w-75 bg-light p-3 shadow mod rounded-7" style="height: 300px;" v-show="modals" v-on-click-outside="closeModal">
         <h4 class="fw-bold" id="modal"></h4>
         <p id="info"></p>
       </div>
-      </Transition>
+    </Transition>
+    
+  </div>
+      
     </div>
   </div>
 </template>
 
 <script setup>
+import { vOnClickOutside } from '@vueuse/components'
 import { ref, onMounted, onUnmounted } from "vue";
+
+const modals = ref(false)
+
+function closeModal() {
+  modals.value = false
+}
+
+
+
+
 
 let handleScroll = () => {
   let vid = document.querySelector("#vid");
@@ -103,6 +118,7 @@ const studentData = ref([
 
 let batafsil = (id) => {
   show.value = true
+  modals.value = true
   let modal = document.querySelector('#modal')
   let info = document.querySelector('#info')
  
@@ -167,26 +183,24 @@ let batafsil = (id) => {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  
+  }
+
+
+  .black {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
   }
 }
 
 
 
-.bounce-enter-active {
-  animation: bounce-in 0.5s;
-}
-.bounce-leave-active {
-  animation: bounce-in 0.5s reverse;
-}
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.25) translate(-50%, -50%);
-  }
-  100% {
-    transform: scale(1) translate(-50%, -50%);
-  }
-}
+
+
+
+
 </style>

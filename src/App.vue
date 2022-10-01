@@ -1,7 +1,6 @@
-<script setup>
+<script >
 	import { onMounted } from 'vue';
 import Hammasi from './hammasi.vue'
-
 
 
 

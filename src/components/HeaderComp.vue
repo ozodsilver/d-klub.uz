@@ -107,6 +107,25 @@ e.target.classList.add('far')
               >
                 <i class="fa fa-linkedin"></i>
               </a>
+
+
+              <a
+                class="btn bg-transparent shadow-0"
+                style="background-color: #3b5998; position:absolute; right:10px; top:200px; z-index:99999"
+                href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC"
+                role="button"
+                title="skachat pycharm"
+              >
+                <img src="../assets/pycharm.png" alt="" style="width:150px" >
+<!-- 
+<div class="pycharm p-2 d-flex justify-content-center  align-items-center position-relative" >
+<h5 class="text-light" style="text-transform:lowercase">Pycharm IDE ni yuklab olish  <i class="fa fa-download"></i> </h5>
+</div> -->
+
+              </a>
+          
+
+
           
       <div class="container">
         <nav class="navbar navbar-expand-lg shadow-0 py-4">
@@ -369,7 +388,28 @@ transform: scale(1) ;
     width: 430px !important;
     height: 300px;
   }
+
+
+ 
 }
+.pycharm{
+    width: 200px;
+    height: 100px;
+    border:  none;
+    position: absolute;
+    top:-80%;
+    right: 60%;
+    border-radius: 10px;
+    background: rgb(5,124,112);
+background: linear-gradient(11deg, rgba(5,124,112,1) 24%, rgba(8,126,159,0.8045927843793768) 92%);
+
+
+  }
+
+
+
+
+
 
 .day{
   background: rgb(68, 70, 70) !important;
