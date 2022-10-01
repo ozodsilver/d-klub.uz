@@ -31,7 +31,11 @@ import Hammasi from './hammasi.vue'
  
   }
 
-
+ @media (max-width:800px) {
+	#app{
+		display: none !important;
+	}
+ }
 
 ::-webkit-scrollbar {
   width: 15px   ;
