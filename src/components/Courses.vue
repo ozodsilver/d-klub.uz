@@ -1,161 +1,66 @@
 <template >
-  <div id="courses" >
+  <div id="courses">
     <div class="container">
-      <h1 class="mt-5 opacity-75">'Dasturchilar klubi' da mavjud kurslar</h1>
-      <section class="pb-4 mt-5 ">
-        <div class="border rounded-5">
-          <section class="w-100 p-4">
-            <div class="datatable">
-              <div
-                class="datatable-inner table-responsive ps"
-                style="overflow: auto; position: relative"
-              >
-           
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       dds
-      </div>
-      <div class="modal-footer">
-       
-      
-      </div>
-    </div>
-  </div>
-</div>
+      <h1 class="mt-5 py-5 opacity-75">
+        'Dasturchilar klubi' da mavjud kurslar
+      </h1>
 
-
-
-  <div class="table-responsive table-responsive-sm position-relative">
-
-                <table
-                  class="table  table-striped datatable-table table-hover mt-4"
-                  :class="{ 'table-dark': $store.state.show }"
-                >
-                  <thead class="datatable-header">
-                    <tr class="fw-bold">
-
-
-                      
-                      <th style="cursor: pointer" scope="col">
-                        <i
-                          data-mdb-sort="field_0"
-                          class="datatable-sort-icon fas fa-arrow-up active"
-                          style="transform: rotate(0deg)"
-                        ></i>
-                        Kurs nomi
-                      </th>
-                    
-                      <th style="cursor: pointer" scope="col">
-                        <i
-                          data-mdb-sort="field_2"
-                          class="datatable-sort-icon fas fa-arrow-up"
-                          style="transform: rotate(0deg)"
-                        ></i>
-                        Muddati
-                      </th>
-
-                      <th style="cursor: pointer" scope="col">
-                        <i
-                          data-mdb-sort="field_1"
-                          class="datatable-sort-icon fas fa-arrow-up"
-                          style="transform: rotate(0deg)"
-                        ></i>
-                        Texnologiya
-                      </th>
-                  
-                    </tr>
-                  </thead>
-                  <tbody class="datatable-body">
-                    <tr
-                      scope="row"
-                      data-mdb-index="4"
-                      v-for="student in studentData"
-                      :key="student.ID"
-                    >
-                      <td>
-                        {{ student.Name }}
-                      </td>
-                      <td>
-                        {{ student.Course }}
-                      </td>
-
-                      <td>
-                        {{ student.Gender }}
-                      </td>
-                      <td class="d-block text-center">
-                        <button
-                          class="btn btn-primary mod"
-                          @click="batafsil(student.ID)"
-                          href="#exampleModalToggle1"
-                          role="button"
-                           data-mdb-toggle="modal" data-mdb-target="#exampleModal"
-                        >
-                          batafsil ...
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-             
-      
-            </div>
-            </div>
-          </section>
+      <div class="cards">
+        <div
+          class="p-3 mt-5 carta"
+          v-for="carta in studentData"
+          :key="carta.ID"
+          @click="batafsil(carta.ID)"
+        >
+          <img :src="carta.image" alt="" class="card-img-top w-25" />
+          <h4 class="mt-2 float-end">{{ carta.Name }}</h4>
+          <p class="float-end">
+            {{ carta.Course }}
+          </p>
+          <p></p>
         </div>
-      </section>
+      </div>
+
+      <Transition name="bounce">
+      <div class="w-75 bg-light p-3 shadow mod rounded-7" style="height: 300px" v-show="show">
+        <h4 class="fw-bold" id="modal"></h4>
+        <p id="info"></p>
+      </div>
+      </Transition>
     </div>
-
-
-
-
-
-
   </div>
-
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-let handleScroll = ()=>{
+let handleScroll = () => {
+  let vid = document.querySelector("#vid");
 
-let vid = document.querySelector('#vid')
+  let quti = document.querySelector("#quti");
 
-let quti = document.querySelector('#quti')
+  console.log(window.scrollY);
+};
 
-
-console.log(window.scrollY)
-
-
-
-}
-onMounted(()=>{
-  window.addEventListener('scroll', handleScroll);
-})
-
-onUnmounted(()=>{
-  window.removeEventListener('scroll', handleScroll);
-})
+let show = ref(false)
 
 
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
 
-
-
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 
 const studentData = ref([
   {
     ID: 1,
     Name: "Mobile dasturlash",
     Course: "7 oy",
+    image:
+      "https://i.pinimg.com/originals/99/b1/74/99b17456234f6ac5a33f2e2276ec5fcc.png",
+
     Gender: "java, kotlin",
     Age: "17",
   },
@@ -163,6 +68,8 @@ const studentData = ref([
     ID: 2,
     Name: "Robert V. Kratz",
     Course: "Philosophy",
+    image:
+      "https://www.mishdroid.ru/images/virtuemart/product/frontend_itproger_profession.png",
     Gender: "Male",
     Age: "19",
   },
@@ -170,13 +77,17 @@ const studentData = ref([
     ID: 3,
     Name: "Kristen Anderson",
     Course: "Economics",
+    image:
+      "https://www.mishdroid.ru/images/virtuemart/product/backend_itproger_profession.png",
     Gender: "Female",
     Age: "20",
-  },  
+  },
   {
     ID: 4,
     Name: "Adam Simon",
     Course: "Food science",
+    image:
+      "https://avatars.mds.yandex.net/i?id=4351a03bd1d7092d944f97a78c8039a6-4444125-images-thumbs&n=13",
     Gender: "Male",
     Age: "21",
   },
@@ -184,44 +95,98 @@ const studentData = ref([
     ID: 5,
     Name: "Daisy Katherine",
     Course: "Business studies",
+    image: "https://app.svgator.com/assets/svgator.webapp/log-in-girl.svg",
     Gender: "Female",
     Age: "22",
   },
 ]);
 
-
 let batafsil = (id) => {
-  let modalTitle = document.querySelector('.modal-title')
-  let mBody = document.querySelector('.modal-body')
+  show.value = true
+  let modal = document.querySelector('#modal')
+  let info = document.querySelector('#info')
+ 
   studentData.value.forEach((el) => {
+    
     if (el.ID == id) {
-      modalTitle.innerHTML = el.Name;
-      mBody.innerHTML = el.Course
+   modal.innerHTML = el.Name
+   info.innerHTML = el.Course
+
     }
+
+  
+    
+    
+   
   });
 };
-
-
-
 </script>
 
 <style lang="scss" scoped>
-#courses{
-  .modal{
-    color:rgb(21, 14, 14) !important; 
+#courses {
+  .modal {
+    color: rgb(21, 14, 14) !important;
   }
 
+  .wall {
+    height: 600px;
 
- .wall{
-  height: 600px;
+    img {
+      transform: scale(0);
+    }
+  }
 
-  img{
+  .carta {
+    border-radius: 6px;
+    box-shadow: -15px -15px 1px rgba(174, 171, 171, 0.4),
+      15px 15px 1px rgba(230, 226, 226, 0.8);
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+    &:hover {
+      box-shadow: 0px 0px 1px rgba(212, 203, 203, 0.4),
+        0px 0px 1px rgba(205, 197, 197, 0.8);
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 35px 67px;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+
+  .mod {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
     transform: scale(0);
   }
- }
-
-
-
-
+  50% {
+    transform: scale(1.25) translate(-50%, -50%);
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
 }
 </style>

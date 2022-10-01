@@ -3,7 +3,7 @@
 <div class="container">
 
 <h1 class="text-center fw-bold" id="feature">Yangiliklar</h1>
-<p class="text-center opacity-70"><kbd class="text-white">"Dasturchilar Klubi"</kbd> da kurs yangiliklari, Firmadagi ish o'rinlari, va IT olamidagi yangiliklarini o'qishingiz mumkin</p>
+<p class="text-center opacity-70 my-4 fs-6"><kbd class="text-white">"Dasturchilar Klubi"</kbd> da kurs yangiliklari, Firmadagi ish o'rinlari, va IT olamidagi yangiliklarini o'qishingiz mumkin</p>
 <div class="row  mt-5">
 
 
@@ -43,10 +43,15 @@
 
 <style lang="scss" scoped>
 #main{
+  p{
+    font-family: 'Jost', sans-serif;
+  }
+  
 #feature{
     font-family: 'Bungee Inline', cursive;
 }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
 </style>

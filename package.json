@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/vue-fontawesome": "^3.0.1",
     "mdb-ui-kit": "^4.4.0",
     "sass": "^1.54.4",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.4",
+    "vue-router": "^4.1.5",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

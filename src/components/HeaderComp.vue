@@ -5,7 +5,7 @@ import { ref } from "vue";
 import { useStore } from "vuex";
 export default {
   setup() {
-    let lord = ref(null)
+    let lord = ref(null);
     const docState = ref("saved");
     let vid = ref(true);
     const store = useStore();
@@ -17,59 +17,97 @@ export default {
 
     // dark mode
 
-    let darkMode = () => {
+    let darkMode = (e) => {
       document.body.classList.toggle("dark");
-
+e.target.classList.toggle('day')
+e.target.classList.add('far')
       store.state.show = !store.state.show;
     };
 
-
-
-
-
-
-    let  playSound =  (sound)=> {
-
+    let playSound = (sound) => {
       var audio = new Audio(sound);
 
-      if(sound) {
-      
+      if (sound) {
         audio.play();
-        lord.value.trigger = 'loop'
-        
+        lord.value.trigger = "loop";
       }
+    };
 
-    }
+    let cursor = (event) => {
+      let cursorr = document.querySelector("#cursor");
+      let x = event.screenX + "px";
+      let y = event.screenY - 80 + "px";
 
+      cursorr.style.cssText = `transform:translate(${x}, ${y} )`;
+    };
 
-
-    let cursor = (event)=>{
-let cursorr = document.querySelector('#cursor');
-let x = event.screenX + 'px';
-let y = event.screenY -80 + 'px'
-
-
-cursorr.style.cssText = `transform:translate(${x}, ${y} )`
-
-    }
-
-    return { vid, addVideo, docState, darkMode, cursor,playSound,lord };
+    return { vid, addVideo, docState, darkMode, cursor, playSound, lord };
   },
-
-
-
-  
 };
 </script>
 
 <template>
   <div class="w-100">
     <div id="home" @mousemove="cursor">
+      <div id="cursor"></div>
+      <i class="fas fa-moon fa text-white p-2  rounded" @click="darkMode" style="position:fixed; transition:1s; cursor:pointer; left:10px;z-index:88888; top:10px; background:rgb(117,149,255)"></i>
+      <lord-icon
+                src="https://cdn.lordicon.com/pgbyoxin.json"
+                trigger="morph"
+                class="p-1  rounded"
+                colors="primary:#4be1ec,secondary:#cb5eee"
+                style="width: 30px; height: 30px; position:absolute; left:10px; top:60px; background:#3b5998; cursor:pointer"
+                @click.once="
+                  playSound(
+                    'https://new.muzikavsem.org/dl/993730849/Michael_Vignola_-_Knowing_(new.muzikavsem.org).mp3'
+                  )
+                "
+                ref="lord"
+              >
+              </lord-icon>
 
-<div id="cursor">
 
-</div>
+              <a
+                class="btn btn-primary  bg-primary bg-danger"
+                href="#!"
+                role="button"
+                style="position:absolute; right:10px; top:10px; z-index:99999"
+              >
+                <i class="fab fa-instagram  text-light"></i>
+              </a>
 
+              
+
+              <a
+                class="btn btn-primary"
+                style="position:absolute; right:10px; top:60px; z-index:99999"
+                href="#!"
+                role="button"
+                
+              >
+                <i class="fa fa-telegram "></i>
+              </a>
+
+              <a
+                class="btn btn-primary"
+                style="background-color: #3b5998; position:absolute; right:10px; top:110px; z-index:99999"
+                href="#!"
+                role="button"
+                
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a
+                class="btn btn-primary"
+                style="background-color: #3b5998; position:absolute; right:10px; top:160px; z-index:99999"
+                href="#!"
+                role="button"
+                
+              >
+                <i class="fa fa-linkedin"></i>
+              </a>
+          
       <div class="container">
         <nav class="navbar navbar-expand-lg shadow-0 py-4">
           <!-- Container wrapper -->
@@ -112,64 +150,10 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
                 <!-- <li class="nav-item">
                   <a class="nav-link text-light" href="#">Tafsiyalar</a>
                 </li> -->
-
-             
-
-              
               </ul>
               <!-- Left links -->
             </div>
 
-            <div class="d-flex align-items-center gap-3">
-             
-              <a
-                class="btn btn-primary"
-                style="background-color: #3b5998"
-                href="#!"
-                role="button"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                class="btn btn-primary bg-primary fs-5"
-                href="#!"
-                role="button"
-              >
-                <i class="fab fa-telegram"></i>
-              </a>
-              <a
-                class="btn btn-primary bg-primary bg-danger"
-                href="#!"
-                role="button"
-              >
-                <i class="fab fa-instagram text-light"></i>
-              </a>
-
-              <div class="form-check form-switch" @change="darkMode">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckDefault"
-                />
-                <label
-                  class="form-check-label text-white"
-                  for="flexSwitchCheckDefault"
-                  >Tungi rejim</label
-                >
-              </div>
-
-              <lord-icon
-    src="https://cdn.lordicon.com/psseymno.json"
-    trigger="morph"
-    colors="primary:#4be1ec,secondary:#cb5eee"
-    style="width:40px;height:40px"
-    @click.once = "playSound('https://new.muzikavsem.org/dl/993730849/Michael_Vignola_-_Knowing_(new.muzikavsem.org).mp3')"
- ref = 'lord'>
-</lord-icon>
-
-
-            </div>
             <!-- Right elements -->
           </div>
           <!-- Container wrapper -->
@@ -180,20 +164,40 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
             style="position: relative; z-index: 55"
             v-if="vid"
           >
-            <div class="col-md-6 col-sm-12 text-white mt-4 py-5 ">
+            <div class="col-md-6 col-sm-12 text-white mt-4 py-5">
               <h1 class="homeText">
-              Dasturchilar klubi, IT olamini biz bilan zabt et!
+                Dasturchilar klubi, IT olamini biz bilan zabt et!
               </h1>
-              <p class="opacity-75  ">
-               Dasturchilar  klubi, IT ga ixtisoslashgan o'quv markazi, va IT firmasi bo'lib, hozirgi kunda zamonaviy va yoqimli kasblardan biri bo'lgan dasturlashni o'zbek yoshlariga o'rgatib kelmoqda.Siz o'z kelajagingizni IT sohasida ko'rayotgan bo'lsangiz "Dasturchilar klubi aynan siz uchun!
+              <p class="opacity-75">
+                Dasturchilar klubi, IT ga ixtisoslashgan o'quv markazi, va IT
+                firmasi bo'lib, hozirgi kunda zamonaviy va yoqimli kasblardan
+                biri bo'lgan dasturlashni o'zbek yoshlariga o'rgatib
+                kelmoqda.Siz o'z kelajagingizni IT sohasida ko'rayotgan
+                bo'lsangiz "Dasturchilar klubi aynan siz uchun!
               </p>
-              <button class="btn btn-danger rounded-9 px-5">
-               Ro'yxatdan o'tish
+              <button
+                class="btn btn-danger rounded-9 px-5"
+                style="
+                  background: rgb(255, 113, 41);
+                  background: linear-gradient(
+                    90deg,
+                    rgba(255, 113, 41, 1) 0%,
+                    rgba(250, 65, 19, 1) 32%
+                  );
+                "
+              >
+                Ro'yxatdan o'tish
               </button>
             </div>
 
-            <div class="col-md-6 ">
-              <img src="../assets/dkk.png" alt="" class="w-75 d-block m-auto">
+            <div class="col-md-6">
+              <img
+                src="../assets/dkk.png"
+                alt=""
+                class="w-100 d-block m-auto opacity-75"
+                style="position: relative; top: -20px"
+                id="dk"
+              />
             </div>
           </div>
         </Transition>
@@ -219,33 +223,30 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
         </Transition>
       </div>
     </div>
-
-   
   </div>
 </template>
 
 
 <style lang="scss" scoped>
 #home {
-
   width: 100%;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.8);
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.8);
   background-blend-mode: color-burn;
-  background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-03/1614855749_23-p-foni-uzori-24.jpg');
+  background-image: url("https://www.cxoinsightme.com/wp-content/uploads/2020/04/shutterstock_1139124146-scaled.jpg");
   background-size: cover;
   background-attachment: fixed;
-  
- 
+
   clip-path: polygon(0 0, 100% 0%, 100% 84%, 0 100%);
 
   position: relative;
   &:before {
     content: "";
     width: 100%;
-    height: 6%;
+    height: 5%;
     position: absolute;
-    background: rgb(242, 23, 93);
+    background: rgb(5,124,112);
+background: linear-gradient(11deg, rgba(5,124,112,1) 24%, rgba(8,126,159,1) 92%);
     bottom: 40px;
     left: 0;
     transform: rotate(-4deg);
@@ -300,15 +301,27 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
         box-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;
       }
 
-      a{
-        font-family: 'Josefin Sans', sans-serif;
+      a {
+        font-family: "Josefin Sans", sans-serif;
         font-size: 1.3em;
       }
     }
   }
 
+  #dk{
+    transform: scale(1) ;
+    animation: dk 0.6s 1;
+  }
+  @keyframes dk{
+    50%{
+transform: scale(0.3);
+    }
 
- 
+    100%{
+transform: scale(1) ;
+
+    }
+  }
 }
 
 .homeRek {
@@ -352,11 +365,15 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
     }
   }
 
-
-  #svgator{
+  #svgator {
     width: 430px !important;
     height: 300px;
   }
+}
+
+.day{
+  background: rgb(68, 70, 70) !important;
+  color:rgb(255, 255, 255) !important;
 }
 
 .bounce-enter-active {
@@ -403,38 +420,29 @@ cursorr.style.cssText = `transform:translate(${x}, ${y} )`
   transform: translateY(-30px);
 }
 
-
-
-#cursor{
+#cursor {
   width: 10px;
   height: 10px;
-  box-shadow:  0 0 10px white,
-  0 0 10px white,
-
-  0 0 100px white,
-  0 0 150px white,0 0 10px white,
-  0 0 200px white,
-  0 0 300px white,
-  0 0 100px white,
-  0 0 100px white;
+  box-shadow: 0 0 10px white, 0 0 10px white, 0 0 100px white, 0 0 150px white,
+    0 0 10px white, 0 0 200px white, 0 0 300px white, 0 0 100px white,
+    0 0 100px white;
   background: white;
   position: relative;
   z-index: 99993333339999;
   border-radius: 50%;
   transition: 0.1s;
-  transition-timing-function: comparable(300, 300)
+  transition-timing-function: comparable(300, 300);
 }
 
-
-@media (max-width:1380px){
-  #home{
-    #svgator{
-    width: 430px !important;
-    height: 300px !important   ;
-  }
+@media (max-width: 1380px) {
+  #home {
+    #svgator {
+      width: 430px !important;
+      height: 300px !important   ;
+    }
   }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap");
 </style>

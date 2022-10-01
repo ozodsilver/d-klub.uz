@@ -37,7 +37,9 @@
 
 </div>
 
+<div class="salom">
 
+</div>
 
     </div>
 </template>
@@ -67,8 +69,7 @@ age:44
 
 
 
-
-        return {card1, clickHover}
+        return {card1, clickHover, }
     }
 }
 
@@ -76,16 +77,15 @@ age:44
 onMounted(()=>{
     console.log(card1.value)
 })
+
+
 </script>
 
 <style lang="scss" scoped>
     #vacansy{
+      
        .card{
         transition:all 1s;
-      
-       
-      
-     
        }
 
      
