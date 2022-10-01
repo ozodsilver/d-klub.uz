@@ -112,7 +112,7 @@ e.target.classList.add('far')
               <a
                 class="btn bg-transparent shadow-0"
                 style="background-color: #3b5998; position:absolute; right:10px; top:200px; z-index:99999"
-                href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC"
+                href="https://download.jetbrains.com/python/pycharm-community-2022.2.2.exe?_ga=2.138687162.805772579.1664622847-1968738039.1664622847&_gl=1*ajp1es*_ga*MTk2ODczODAzOS4xNjY0NjIyODQ3*_ga_9J976DJZ68*MTY2NDYyMjg0Ny4xLjEuMTY2NDYyNDg1Mi4zMi4wLjA"
                 role="button"
                 title="skachat pycharm"
               >
