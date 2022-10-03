@@ -117,12 +117,24 @@ e.target.classList.add('far')
                 title="skachat pycharm"
               >
                 <img src="../assets/pycharm.png" alt="" style="width:150px" >
-<!-- 
-<div class="pycharm p-2 d-flex justify-content-center  align-items-center position-relative" >
-<h5 class="text-light" style="text-transform:lowercase">Pycharm IDE ni yuklab olish  <i class="fa fa-download"></i> </h5>
-</div> -->
+
 
               </a>
+
+
+         
+              <a
+                class="btn bg-transparent shadow-0"
+                style="background-color: #3b5998; position:absolute; right:10px; top:390px; z-index:99999"
+                href="https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe"
+                role="button"
+                title="skachat pycharm"
+              >
+                <img src="../assets/python.png" alt="" style="width:150px" >
+
+
+              </a>
+
           
 
 
