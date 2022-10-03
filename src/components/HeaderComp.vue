@@ -110,13 +110,13 @@ e.target.classList.add('far')
 
 
               <a
-                class="btn bg-transparent shadow-0"
-                style="background-color: #3b5998; position:absolute; right:10px; top:200px; z-index:99999"
+                class="btn bg-transparent shadow-0 px-3"
+                style="background-color: #3b5998; position:absolute; right:0px; top:200px; z-index:99999"
                 href="https://download.jetbrains.com/python/pycharm-community-2022.2.2.exe?_ga=2.138687162.805772579.1664622847-1968738039.1664622847&_gl=1*ajp1es*_ga*MTk2ODczODAzOS4xNjY0NjIyODQ3*_ga_9J976DJZ68*MTY2NDYyMjg0Ny4xLjEuMTY2NDYyNDg1Mi4zMi4wLjA"
                 role="button"
                 title="skachat pycharm"
               >
-                <img src="../assets/pycharm.png" alt="" style="width:150px" >
+                <img src="../assets/pycharm.png" alt="" style="width:50px" >
 
 
               </a>
@@ -124,13 +124,13 @@ e.target.classList.add('far')
 
          
               <a
-                class="btn bg-transparent shadow-0"
-                style="background-color: #3b5998; position:absolute; right:10px; top:390px; z-index:99999"
+                class="btn bg-transparent shadow-0 px-3"
+                style="background-color: #3b5998; position:absolute; right:0px; top:260px; z-index:99999"
                 href="https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe"
                 role="button"
                 title="skachat pycharm"
               >
-                <img src="../assets/python.png" alt="" style="width:150px" >
+                <img src="../assets/python.png" alt="" style="width:50px" >
 
 
               </a>
