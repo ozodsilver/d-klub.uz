@@ -1,8 +1,6 @@
-# Vue 3 + Vite
+D-Klub
+Ushbu web site D-Klub IT ga yo'naltirilgan DKlub mchj uchun tayyorlanmoqda.
+ushbu web site uchun vuejs frameworki tanlab olindi
+Texnoloyalar: vuejs, vueRouter, Vuex, mdBootstrap ...  <a href = 'https://d-klub.uz'> d-klub.uz </a>
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar
 <img src = 'https://d-klub.uz/assets/dkk.591eb84a.png' >
