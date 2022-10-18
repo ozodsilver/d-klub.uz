@@ -21,44 +21,37 @@
         </div>
       </div>
 
-  <div class="black" v-show="modals">
-    <Transition name="bounce">
-    <div class="w-75 bg-light p-3 shadow mod rounded-7" style="height: 300px;" v-show="modals" v-on-click-outside="closeModal">
-        <h4 class="fw-bold" id="modal"></h4>
-        <p id="info"></p>
+      <div class="black" v-show="modals">
+        <div
+          class="w-75 bg-light p-3 shadow mod rounded-7"
+          style="height: 300px"
+          v-show="modals"
+          v-on-click-outside="closeModal"
+        >
+          <h4 class="fw-bold" id="modal"></h4>
+        </div>
       </div>
-    </Transition>
-    
-  </div>
-      
     </div>
   </div>
 </template>
 
 <script setup>
-import { vOnClickOutside } from '@vueuse/components'
+import { vOnClickOutside } from "@vueuse/components";
 import { ref, onMounted, onUnmounted } from "vue";
 
-const modals = ref(false)
+const modals = ref(false);
 
 function closeModal() {
-  modals.value = false
+  modals.value = false;
 }
-
-
-
-
 
 let handleScroll = () => {
   let vid = document.querySelector("#vid");
 
   let quti = document.querySelector("#quti");
-
-  console.log(window.scrollY);
 };
 
-let show = ref(false)
-
+let show = ref(false);
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
@@ -117,23 +110,16 @@ const studentData = ref([
 ]);
 
 let batafsil = (id) => {
-  show.value = true
-  modals.value = true
-  let modal = document.querySelector('#modal')
-  let info = document.querySelector('#info')
- 
+  show.value = true;
+  modals.value = true;
+  let modal = document.querySelector("#modal");
+  let info = document.querySelector("#info");
+
   studentData.value.forEach((el) => {
-    
     if (el.ID == id) {
-   modal.innerHTML = el.Name
-   info.innerHTML = el.Course
-
+      modal.innerHTML = el.Name;
+      info.innerHTML = el.Course;
     }
-
-  
-    
-    
-   
   });
 };
 </script>
@@ -154,8 +140,8 @@ let batafsil = (id) => {
 
   .carta {
     border-radius: 6px;
-    box-shadow: -15px -15px 1px rgba(174, 171, 171, 0.4),
-      15px 15px 1px rgba(230, 226, 226, 0.8);
+    box-shadow: -15px -15px 1px rgba(88,190,143, 1),
+      15px 15px 1px rgba(78,95,111, 0.8);
     transition: 0.3s;
     cursor: pointer;
     width: 100%;
@@ -183,9 +169,7 @@ let batafsil = (id) => {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  
   }
-
 
   .black {
     width: 100%;
@@ -193,14 +177,7 @@ let batafsil = (id) => {
     left: 0;
     height: 100vh;
     position: fixed;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
-
-
-
-
-
-
-
 </style>

@@ -33,30 +33,24 @@ e.target.classList.add('far')
       }
     };
 
-    let cursor = (event) => {
-      let cursorr = document.querySelector("#cursor");
-      let x = event.screenX + "px";
-      let y = event.screenY - 80 + "px";
+  
 
-      cursorr.style.cssText = `transform:translate(${x}, ${y} )`;
-    };
-
-    return { vid, addVideo, docState, darkMode, cursor, playSound, lord };
+    return { vid, addVideo, docState, darkMode,  playSound, lord };
   },
 };
 </script>
 
 <template>
   <div class="w-100">
-    <div id="home" @mousemove="cursor">
-      <div id="cursor"></div>
-      <i class="fas fa-moon fa text-white p-2  rounded" @click="darkMode" style="position:fixed; transition:1s; cursor:pointer; left:10px;z-index:88888; top:10px; background:rgb(117,149,255)"></i>
+    <div id="home" >
+   
+      <i class="fas fa-moon fa text-white p-2  rounded" @click="darkMode" style="position:fixed; transition:1s; cursor:pointer; left:10px;z-index:888888888; top:10px; background:rgb(117,149,255)"></i>
       <lord-icon
                 src="https://cdn.lordicon.com/pgbyoxin.json"
                 trigger="morph"
                 class="p-1  rounded"
                 colors="primary:#4be1ec,secondary:#cb5eee"
-                style="width: 30px; height: 30px; position:absolute; left:10px; top:60px; background:#3b5998; cursor:pointer"
+                style="width: 30px; height: 30px; position:absolute; left:10px; top:60px; background:#3b5998; cursor:pointer; z-index:999999999"
                 @click.once="
                   playSound(
                     'https://new.muzikavsem.org/dl/993730849/Michael_Vignola_-_Knowing_(new.muzikavsem.org).mp3'
@@ -116,7 +110,7 @@ e.target.classList.add('far')
                 role="button"
                 title="skachat pycharm"
               >
-                <img src="../assets/pycharm.png" alt="" style="width:50px" >
+                <img src="../assets/pycharm.png" alt="" style="width:50px; position:relative; z-index:99999999999" >
 
 
               </a>
@@ -207,15 +201,10 @@ e.target.classList.add('far')
                 bo'lsangiz "Dasturchilar klubi aynan siz uchun!
               </p>
               <button
-                class="btn btn-danger rounded-9 px-5"
-                style="
-                  background: rgb(255, 113, 41);
-                  background: linear-gradient(
-                    90deg,
-                    rgba(255, 113, 41, 1) 0%,
-                    rgba(250, 65, 19, 1) 32%
-                  );
-                "
+                class="btn text-white  rounded-9 px-5"
+                style="background: rgb(88,190,143);
+background: linear-gradient(153deg, rgba(88,190,143,1) 7%, rgba(78,95,111,0.82) 61%);
+"
               >
                 Ro'yxatdan o'tish
               </button>
@@ -226,7 +215,7 @@ e.target.classList.add('far')
                 src="../assets/dkk.png"
                 alt=""
                 class="w-100 d-block m-auto opacity-75"
-                style="position: relative; top: -20px"
+                style="position: relative; top: -100px"
                 id="dk"
               />
             </div>
@@ -276,7 +265,7 @@ e.target.classList.add('far')
     width: 100%;
     height: 5%;
     position: absolute;
-    background: rgb(5,124,112);
+    background: rgb(88,190,143);
 background: linear-gradient(11deg, rgba(5,124,112,1) 24%, rgba(8,126,159,1) 92%);
     bottom: 40px;
     left: 0;
@@ -412,7 +401,7 @@ transform: scale(1) ;
     top:-80%;
     right: 60%;
     border-radius: 10px;
-    background: rgb(5,124,112);
+    background: rgb(88,190,143);
 background: linear-gradient(11deg, rgba(5,124,112,1) 24%, rgba(8,126,159,0.8045927843793768) 92%);
 
 
